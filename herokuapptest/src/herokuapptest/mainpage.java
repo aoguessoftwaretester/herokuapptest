@@ -18,7 +18,7 @@ public class mainpage {
 		
 		// Optional: small delay to let page fully load (for demo purposes)
 	    try {
-	        Thread.sleep(1000); // 1 second
+	        Thread.sleep(1000); // 1 second 
 	    } catch (InterruptedException e) {
 	        e.printStackTrace();
 	    }

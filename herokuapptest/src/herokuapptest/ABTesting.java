@@ -22,7 +22,7 @@ public class ABTesting {
         String expectedText = "Also known as split testing. This is a way in which businesses are able to simultaneously test and learn different versions of a page to see which text and/or functionality works best towards a desired outcome (e.g. a user action such as a click-through).";
 
         try {
-                // Explicit wait until paragraph is visible
+                // Explicit wait until paragraph is visible 
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
             WebElement paragraph = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div.example p"))
                 );
