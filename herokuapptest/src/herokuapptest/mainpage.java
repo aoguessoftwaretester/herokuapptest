@@ -44,6 +44,11 @@ public class mainpage {
 		BrokenImages brokenImages = new BrokenImages(driver);  
 		brokenImages.verifyBrokenImages();
 		
+		//Call Broken Image class
+		driver.findElement(By.linkText("Challenging DOM")).click();
+		ChallengingDOM challengingDOM = new ChallengingDOM(driver);  
+		challengingDOM.verifyChallengingDOM();		
+		
         driver.quit();
 
 	}
