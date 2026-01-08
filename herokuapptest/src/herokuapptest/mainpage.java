@@ -35,6 +35,14 @@ public class mainpage {
 		page.testAddRemoveElements();
 		
 		//Call Basic Auth class
+		driver.findElement(By.linkText("Basic Auth")).click();
+		BasicAuth basicAuth = new BasicAuth(driver);  
+		basicAuth.verifyBasicAuth();
+		
+		//Call Broken Image class
+		driver.findElement(By.linkText("Broken Images")).click();
+		BrokenImages brokenImages = new BrokenImages(driver);  
+		brokenImages.verifyBrokenImages();
 		
         driver.quit();
 
