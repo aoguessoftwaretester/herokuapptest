@@ -44,10 +44,15 @@ public class mainpage {
 		BrokenImages brokenImages = new BrokenImages(driver);  
 		brokenImages.verifyBrokenImages();
 		
-		//Call Broken Image class
+		//Call Challenging DOM class
 		driver.findElement(By.linkText("Challenging DOM")).click();
 		ChallengingDOM challengingDOM = new ChallengingDOM(driver);  
 		challengingDOM.verifyChallengingDOM();		
+		
+		//Call Checkboxes class
+		driver.findElement(By.linkText("Checkboxes")).click();
+		Checkboxes checkboxes = new Checkboxes(driver);  
+		checkboxes.verifyCheckboxes();	
 		
         driver.quit();
 
