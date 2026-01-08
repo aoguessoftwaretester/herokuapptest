@@ -54,6 +54,69 @@ public class mainpage {
 		Checkboxes checkboxes = new Checkboxes(driver);  
 		checkboxes.verifyCheckboxes();	
 		
+		// Call Context Menu
+		// Call Digest Authentication
+		// Call Disappearing Elements
+				
+		// Call Drag and Drop class
+		driver.findElement(By.linkText("Drag and Drop")).click();
+		DragAndDrop draganddrop = new DragAndDrop(driver);  
+		draganddrop.verifyDragAndDrop();	
+		
+		//Call Dropdown class
+		driver.findElement(By.linkText("Dropdown")).click();
+		Dropdown dropdown = new Dropdown(driver);  
+		dropdown.verifyDropdown();	
+		
+		//Call Dynamic Content class
+		driver.findElement(By.linkText("Dynamic Content")).click();
+		DynamicContent dynamiccontent = new DynamicContent(driver);  
+		dynamiccontent.verifyDynamicContent();	
+		
+		//Call Dynamic Controls class 
+		//Call Dynamic Loading class 
+		//Call Entry Ad class 
+		//Call Exit Intent class 
+		
+		//Call File Download class 
+		driver.findElement(By.linkText("File Download")).click();
+		FileDownload filedownload = new FileDownload(driver);  
+		filedownload.verifyFileDownload();	
+		
+		//Call File Upload class 
+		driver.findElement(By.linkText("File Upload")).click();
+		FileUpload fileupload = new FileUpload(driver);  
+		fileupload.verifyFileUpload();	
+		
+		//Call Floating Menu class
+		//Call Forgot Password class
+		//Call Form Authentication class
+		//Call Frames class
+		//Call Geolocation class
+		//Call Horizontal Slider class
+		//Call Hovers class
+		//Call Infinite Scroll class
+		//Call Inputs class
+		//Call JQuery UI Menus class
+		//Call JavaScript Alerts class
+		//Call JavaScript onload event error class
+		// Call Key Presses class
+		// Call Large & Deep DOM class
+		// Call Multiple Windows class
+		// Call Nested Frames class
+		// Call Notification Messages class
+		// Call Redirect Link class
+		// Call Secure File Download class
+		// Call Shadow DOM class
+		// Call Shifting Content class
+		// Call Slow Resources class
+		// Call Sortable Data Tables class
+		// Call Status Codes class
+		// Call Typos calss
+		
+		
+		//Call WYSIWYG Editor class
+		
         driver.quit();
 
 	}
