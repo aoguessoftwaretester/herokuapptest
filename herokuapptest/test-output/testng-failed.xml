@@ -5,6 +5,7 @@
     <classes>
       <class name="herokuapptest.mainpage">
         <methods>
+          <include name="verifyWYSIEditorPage"/>
           <include name="verifyABTestingPage"/>
           <include name="openBrowser"/>
           <include name="tearDown"/>

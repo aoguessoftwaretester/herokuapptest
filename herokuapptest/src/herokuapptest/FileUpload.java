@@ -1,16 +1,22 @@
 package herokuapptest;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class FileUpload {
 
-    private WebDriver driver;
+    public WebDriver driver;
+    public WebDriverWait wait;
 
     // Constructor
     public FileUpload(WebDriver driver) {
         this.driver = driver;
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
     
     public void verifyFileUpload() {
@@ -21,9 +27,12 @@ public class FileUpload {
 
         driver.findElement(By.id("file-submit")).click();
 
-        // Re-locate element AFTER page reload
-        String uploadedText =
-                driver.findElement(By.tagName("h3")).getText();
+        // ✅ WAIT for the success heading to appear
+        WebElement header = wait.until(
+            ExpectedConditions.visibilityOfElementLocated(By.tagName("h3"))
+        );
+
+        String uploadedText = header.getText();
 
         if (uploadedText.equals("File Uploaded!")) {
             System.out.println("✅ File uploaded successfully");
@@ -31,17 +40,14 @@ public class FileUpload {
             System.out.println("❌ File upload failed");
         }
 
-        
-	    try {
-	        Thread.sleep(1000); // 1 second
-	    } catch (InterruptedException e) {
-	        e.printStackTrace();
-	    }
-	    
-		// Go back to home page
-        driver.navigate().back();
-        System.out.println("Returned to Home Page Title: " + driver.getTitle());
-        
-	}
+        // Optional short pause for visibility
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
+        // ✅ Always go back to home explicitly
+        driver.get("https://the-internet.herokuapp.com/");
+    }
 }

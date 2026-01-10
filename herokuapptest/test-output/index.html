@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Gel\AppData\Local\Temp\testng-eclipse-1037356821\testng-customsuite.xml</span>
+                    <span>C:\Users\Gel\AppData\Local\Temp\testng-eclipse-867901136\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">12 methods, 1 failed,   11 passed</span>
+                    <span class="method-stats">13 methods, 2 failed,   11 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -104,6 +104,11 @@
                       <span>
                         <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="herokuapptest.mainpage" class="method navigator-link" hash-for-method="verifyABTestingPage">verifyABTestingPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="herokuapptest.mainpage" class="method navigator-link" hash-for-method="verifyWYSIEditorPage">verifyWYSIEditorPage</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -231,6 +236,64 @@
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyWYSIEditorPage">
+                  </a> <!-- verifyWYSIEditorPage -->
+                  <span class="method-name">verifyWYSIEditorPage</span>
+                  <div class="stack-trace">org.openqa.selenium.InvalidElementStateException: invalid element state
+  (Session info: chrome=143.0.7499.193)
+Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [1c4705b475042fedce81f0f9bdcb6676, clearElement {id=f.B92FA28916FA3A9EEA6871E8DB0E66FC.d.7D4C1D199C4E84BF1D209B95BCD3A27C.e.3735}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.193, chrome: {chromedriverVersion: 143.0.7499.42 (24bdc8c48a0c..., userDataDir: C:\Users\Gel\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60798}, goog:processID: 36132, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60798/devtoo..., se:cdpVersion: 143.0.7499.193, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (1c4705b475042fedce81f0f9bdcb6676)] -&gt; id: tinymce]
+Session ID: 1c4705b475042fedce81f0f9bdcb6676
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:129)
+	at herokuapptest.WYSIEditor.verifyWYSIEditor(WYSIEditor.java:43)
+	at herokuapptest.mainpage.verifyWYSIEditorPage(mainpage.java:173)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Default_suite-class-failed -->
           <div class="suite-Default_suite-class-passed">
@@ -321,7 +384,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Gel\AppData\Local\Temp\testng-eclipse-1037356821\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Gel\AppData\Local\Temp\testng-eclipse-867901136\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -370,60 +433,64 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(12);
+data.addRows(13);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'verifyAddRemoveElementsPage')
 data.setCell(0, 2, 'herokuapptest.mainpage')
-data.setCell(0, 3, 7401);
+data.setCell(0, 3, 7463);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'verifyDragAndDropPage')
 data.setCell(1, 2, 'herokuapptest.mainpage')
-data.setCell(1, 3, 2504);
+data.setCell(1, 3, 2542);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'verifyChallengingDOMPage')
+data.setCell(2, 1, 'verifyDropdownPage')
 data.setCell(2, 2, 'herokuapptest.mainpage')
-data.setCell(2, 3, 2378);
+data.setCell(2, 3, 2297);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'verifyABTestingPage')
+data.setCell(3, 1, 'verifyChallengingDOMPage')
 data.setCell(3, 2, 'herokuapptest.mainpage')
-data.setCell(3, 3, 2187);
+data.setCell(3, 3, 2228);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'verifyHomePageTitle')
 data.setCell(4, 2, 'herokuapptest.mainpage')
-data.setCell(4, 3, 2036);
+data.setCell(4, 3, 2034);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'verifyDropdownPage')
+data.setCell(5, 1, 'verifyABTestingPage')
 data.setCell(5, 2, 'herokuapptest.mainpage')
-data.setCell(5, 3, 1865);
+data.setCell(5, 3, 1853);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'verifyBrokenImagesPage')
+data.setCell(6, 1, 'verifyDynamicContentPage')
 data.setCell(6, 2, 'herokuapptest.mainpage')
-data.setCell(6, 3, 1778);
+data.setCell(6, 3, 1852);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'verifyFileUploadPage')
+data.setCell(7, 1, 'verifyBasicAuthPage')
 data.setCell(7, 2, 'herokuapptest.mainpage')
-data.setCell(7, 3, 1708);
+data.setCell(7, 3, 1844);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'verifyDynamicContentPage')
+data.setCell(8, 1, 'verifyFileUploadPage')
 data.setCell(8, 2, 'herokuapptest.mainpage')
-data.setCell(8, 3, 1687);
+data.setCell(8, 3, 1840);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'verifyBasicAuthPage')
+data.setCell(9, 1, 'verifyFileDownloadPage')
 data.setCell(9, 2, 'herokuapptest.mainpage')
-data.setCell(9, 3, 1609);
+data.setCell(9, 3, 1672);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'verifyFileDownloadPage')
+data.setCell(10, 1, 'verifyCheckboxesPage')
 data.setCell(10, 2, 'herokuapptest.mainpage')
-data.setCell(10, 3, 1500);
+data.setCell(10, 3, 1529);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'verifyCheckboxesPage')
+data.setCell(11, 1, 'verifyBrokenImagesPage')
 data.setCell(11, 2, 'herokuapptest.mainpage')
-data.setCell(11, 3, 1438);
+data.setCell(11, 3, 1453);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'verifyWYSIEditorPage')
+data.setCell(12, 2, 'herokuapptest.mainpage')
+data.setCell(12, 3, 1130);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 28 seconds</span>
+              <span class="suite-total-time">Total running time: 29 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -458,55 +525,61 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">verifyABTestingPage</span>
-                <span class="method-start">3782 ms</span>
+                <span class="method-start">2142 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyAddRemoveElementsPage</span>
-                <span class="method-start">6269 ms</span>
+                <span class="method-start">4179 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyBasicAuthPage</span>
-                <span class="method-start">13679 ms</span>
+                <span class="method-start">11649 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyBrokenImagesPage</span>
-                <span class="method-start">15291 ms</span>
+                <span class="method-start">13494 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyChallengingDOMPage</span>
-                <span class="method-start">17076 ms</span>
+                <span class="method-start">14951 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyCheckboxesPage</span>
-                <span class="method-start">19462 ms</span>
+                <span class="method-start">17185 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyDragAndDropPage</span>
-                <span class="method-start">20905 ms</span>
+                <span class="method-start">18721 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyDropdownPage</span>
-                <span class="method-start">23409 ms</span>
+                <span class="method-start">21266 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyDynamicContentPage</span>
-                <span class="method-start">25280 ms</span>
+                <span class="method-start">23566 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyFileDownloadPage</span>
-                <span class="method-start">26967 ms</span>
+                <span class="method-start">25424 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyFileUploadPage</span>
-                <span class="method-start">28471 ms</span>
+                <span class="method-start">27096 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyHomePageTitle</span>
-                <span class="method-start">30179 ms</span>
+                <span class="method-start">28936 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifyWYSIEditorPage</span>
+                <span class="method-start">30970 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">32224 ms</span>
+                <span class="method-start">32318 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -165,12 +165,18 @@ public class mainpage {
 		// Call Typos calss
 		
 		
-		//Call WYSIWYG Editor class
-		
-	    @AfterClass
-	    public void tearDown() 
-	    {   
-	       driver.quit();
-	    }  
+    @Test
+    public void verifyWYSIEditorPage()	//Call WYSIWYG Editor class
+    {
+		driver.findElement(By.linkText("WYSIWYG Editor")).click();
+		WYSIEditor wysiwygeditor = new WYSIEditor(driver);  
+		wysiwygeditor.verifyWYSIEditor();   // this test will always fail because the TinyMCE is in read-only mode	
+    }
+				
+      @AfterClass
+	  public void tearDown() 
+	  {   
+	    driver.quit();
+	  }  
 
 	}
