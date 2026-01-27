@@ -20,6 +20,7 @@ public class WYSIEditor {
     
     @Test
     // Method to verify page content
+    // This test will always fail because the editor is read-only
     public void verifyWYSIEditor() {
 
 	        // Open TinyMCE page
