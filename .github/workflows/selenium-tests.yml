@@ -1,8 +1,8 @@
-name: Selenium TestNG Automation
+name: Selenium Test Automation
 
 on:
   pull_request:
-    branches: [ "main" ]
+    branches: [ "master" ]
 
 jobs:
   selenium-testng:
