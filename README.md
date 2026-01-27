@@ -1,4 +1,4 @@
-The following classes are created to test [He](https://the-internet.herokuapp.com/) using selenium javascript
+The following classes are created to test (https://the-internet.herokuapp.com/) using selenium javascript
 A/B Testing
 Add/Remove Elements
 Basic Auth
