@@ -4,6 +4,7 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.Test;
 
 public class AddRemoveElements {
 
@@ -13,7 +14,7 @@ public class AddRemoveElements {
     public AddRemoveElements(WebDriver driver) {
         this.driver = driver;
     }
-    
+    @Test
     // Method to test Add/Remove Elements functionality
     public void verifyelements() {
 
