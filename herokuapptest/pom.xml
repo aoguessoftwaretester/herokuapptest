@@ -33,6 +33,11 @@
         </dependency>
     </dependencies>
 
+<build>
+    <sourceDirectory>src/herokuapptest</sourceDirectory>
+    <testSourceDirectory>src/herokuapptest</testSourceDirectory>
+</build>
+
     <build>
         <plugins>
             <!-- TestNG Runner -->
