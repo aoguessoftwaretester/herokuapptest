@@ -32,4 +32,5 @@ jobs:
           sudo apt install -y google-chrome-stable
 
       - name: Run Selenium TestNG tests
-        run: mvn clean test
+        run: mvn -f branchOne/herokuapptest/pom.xml clean test
+
