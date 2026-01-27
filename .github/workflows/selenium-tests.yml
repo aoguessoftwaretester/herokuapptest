@@ -1,11 +1,11 @@
-name: Selenium TestNG Automation
+name: Selenium TestNG (Maven CI)
 
 on:
   pull_request:
     branches: [ "master" ]
 
 jobs:
-  selenium-testng:
+  selenium-tests:
     runs-on: ubuntu-latest
 
     steps:
@@ -31,5 +31,12 @@ jobs:
           sudo apt update
           sudo apt install -y google-chrome-stable
 
-      - name: Run TestNG tests
+      - name: Run Selenium TestNG tests
         run: mvn clean test
+
+      - name: Upload TestNG Reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: testng-reports
+          path: target/surefire-reports
