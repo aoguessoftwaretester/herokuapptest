@@ -35,7 +35,7 @@
 
 <build>
     <sourceDirectory>src/herokuapptest</sourceDirectory>
-    <testSourceDirectory>src/herokuapptest</testSourceDirectory>
+    <testSourceDirectory>src/herokuapptest/herokuapptest</testSourceDirectory>
 </build>
 
     <build>
