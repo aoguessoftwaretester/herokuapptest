@@ -36,7 +36,6 @@ jobs:
           sudo apt install -y google-chrome-stable
 
       - name: Run Selenium TestNG tests
-        working-directory: herokuapptest
         run: mvn clean test
 
       - name: List files in the workspace
